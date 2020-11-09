@@ -45,7 +45,7 @@ if __name__ == '__main__':
     st.write("""
     # Hasib's AI Dermatology Assistant
 
-    :red_circle: NOT FOR MEDICAL USE
+    :red_circle: NOT FOR MEDICAL USE!
 
     This is a prototype system for identifying presence of melanoma from skin lesions using neural networks.
 
@@ -54,10 +54,19 @@ if __name__ == '__main__':
     "Melanoma detection using adversarial training and deep transfer learning." 
     Physics in Medicine & Biology (2020), arxiv, https://arxiv.org/abs/2004.06824
 
+    Made with :heart:, by [Hasib](https://hasibzunair.github.io/).
+
     If you continue, you assume all liability when using the system.
+
+    Please upload a skin lesion image to predict the presence of melanoma. Here's an example.
     """)
 
-    uploaded_file = st.file_uploader("Please upload a skin lesion image to to predict the presence of melanoma", type="jpg")
+    example_image = keras.preprocessing.image.load_img(
+        "media/example.jpg", target_size=None)
+
+    st.image(example_image, caption="An example input.", width=100)
+
+    uploaded_file = st.file_uploader("Upload file by browzing or drag and drop the image here.", type="jpg")
 
     if uploaded_file is not None:
         # Uploaded image
