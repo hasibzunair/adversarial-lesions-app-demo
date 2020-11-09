@@ -3,7 +3,7 @@
 
 Code for the networks is at https://github.com/hasibzunair/adversarial-lesions 
 
-Web app: TODO.
+Web app: TODO
 
 ### Local development
 
