@@ -12,6 +12,10 @@ import pandas as pd
 from tensorflow import keras
 from melanet.pretrained_model import get_model
 
+# Model package lives at:
+# https://github.com/hasibzunair/adversarial-lesions/tree/master/packaging 
+# https://test.pypi.org/project/melanet/
+
 st.set_option("deprecation.showfileUploaderEncoding", False)
 
 IMAGE_SIZE = 256
