@@ -7,9 +7,11 @@ import keras.backend.tensorflow_backend as tb
 tb._SYMBOLIC_SCOPE.value = True
 import numpy as np
 import time
+import cv2
 import streamlit as st
 import pandas as pd
 from tensorflow import keras
+from PIL import Image
 from melanet.pretrained_model import get_model
 
 # Model package lives at:
@@ -20,6 +22,7 @@ st.set_option("deprecation.showfileUploaderEncoding", False)
 
 IMAGE_SIZE = 256
 
+
 @st.cache(allow_output_mutation=True)
 def cached_model():
     model = get_model()
@@ -28,11 +31,9 @@ def cached_model():
 
 def preprocess_image(uploaded_file):
     # Load image
-    img_array = keras.preprocessing.image.load_img(
-            uploaded_file, target_size=(IMAGE_SIZE, IMAGE_SIZE)
-    )
+    img_array = np.array(Image.open(uploaded_file))
     # Convert to array
-    img_array = keras.preprocessing.image.img_to_array(img_array)
+    img_array = cv2.resize(img_array, (IMAGE_SIZE, IMAGE_SIZE))
     # Normalize to [0,1]
     img_array = img_array.astype('float32')
     img_array /= 255
@@ -61,19 +62,16 @@ if __name__ == '__main__':
     Please upload a skin lesion image to predict the presence of melanoma. Here's an example.
     """)
 
-    example_image = keras.preprocessing.image.load_img(
-        "media/example.jpg", target_size=None)
-
+    example_image = np.array(Image.open("media/example.jpg"))
     st.image(example_image, caption="An example input.", width=100)
 
     uploaded_file = st.file_uploader("Upload file by browzing or drag and drop the image here.", type="jpg")
 
     if uploaded_file is not None:
         # Uploaded image
-        original_image = keras.preprocessing.image.load_img(
-            uploaded_file)
+        original_image = np.array(Image.open(uploaded_file))
 
-        st.image(original_image, caption="Input image of a skin lesion", use_column_width=True)
+        st.image(original_image, caption="Input image of the skin lesion", use_column_width=True)
         st.write("")
         st.write("Analyzing the input image. Please wait...")
 
