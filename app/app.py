@@ -43,7 +43,7 @@ model = cached_model()
 
 if __name__ == '__main__':
     st.write("""
-    # Haisb's AI Dermatology Assistant
+    # Hasib's AI Dermatology Assistant
 
     :red_circle: NOT FOR MEDICAL USE
 
