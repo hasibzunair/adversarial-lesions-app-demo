@@ -1,10 +1,10 @@
 #### :red_circle: NOT FOR MEDICAL USE
 # Web app demo for Melanoma Detection
 
-Code for the networks is at https://github.com/hasibzunair/adversarial-lesions
+Code for the networks is at https://github.com/hasibzunair/adversarial-lesions \n
 Web app: TODO.
 
-### Local dev
+### Local development
 
 ```
 streamlit run app/app.py
