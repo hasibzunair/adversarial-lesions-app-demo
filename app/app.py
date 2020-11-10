@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     :red_circle: NOT FOR MEDICAL USE!
 
-    This is a prototype system for predicting the presence of melanoma from a dermoscopic skin lesions using neural networks.
+    This is a prototype system for predicting the presence of melanoma from dermoscopic skin lesions using neural networks.
 
     Publication: \n
     Zunair, Hasib, and A. Ben Hamza. 
