@@ -48,18 +48,18 @@ if __name__ == '__main__':
 
     :red_circle: NOT FOR MEDICAL USE!
 
-    This is a prototype system for identifying presence of melanoma from skin lesions using neural networks.
+    This is a prototype system for predicting the presence of melanoma from a dermoscopic skin lesions using neural networks.
 
     Publication: \n
     Zunair, Hasib, and A. Ben Hamza. 
     "Melanoma detection using adversarial training and deep transfer learning." 
     Physics in Medicine & Biology (2020), arxiv, https://arxiv.org/abs/2004.06824
 
-    Made with :heart:, by [Hasib](https://hasibzunair.github.io/).
+    Made with :heart:, by [Hasib Zunair](https://hasibzunair.github.io/).
 
     If you continue, you assume all liability when using the system.
 
-    Please upload a skin lesion image to predict the presence of melanoma. Here's an example.
+    Please upload a [dermoscopic](https://dermnetnz.org/topics/dermoscopy/) skin lesion image to predict the presence of melanoma. Here's an example.
     """)
 
     example_image = np.array(Image.open("media/example.jpg"))
