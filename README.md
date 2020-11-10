@@ -3,7 +3,7 @@
 
 Code for the networks is at [https://github.com/hasibzunair/adversarial-lesions](https://github.com/hasibzunair/adversarial-lesions)
 
-Web app: [https://dermaassistant.herokuapp.com/](https://dermaassistant.herokuapp.com/)
+Web app: [https://aiderm.herokuapp.com/](https://aiderm.herokuapp.com/)
 
 ### Local development
 
