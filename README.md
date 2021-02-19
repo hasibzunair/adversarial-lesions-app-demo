@@ -5,6 +5,8 @@ Paper and code for the model can be found at [https://github.com/hasibzunair/adv
 
 Web app: [https://aiderm.herokuapp.com/](https://aiderm.herokuapp.com/)
 
+A REST API endpoint demo is also available at [https://github.com/hasibzunair/adversarial-lesions-rest-api-demo](https://github.com/hasibzunair/adversarial-lesions-rest-api-demo) for local test and dev build for showoff purposes. 
+
 ### Local development
 
 ```
